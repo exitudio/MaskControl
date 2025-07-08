@@ -1,6 +1,6 @@
 # ControlMM: Controllable Masked Motion Generation
 ### [[Project Page]](https://www.ekkasit.com/ControlMM-page/) [[Paper]](https://arxiv.org/abs/2410.10780)
-![teaser_image](https://www.ekkasit.com/ControlMM-page/assets/landing.jpg)
+![teaser_image](https://www.ekkasit.com/ControlMM-page/assets/landing.png)
 
 If you find our code or paper helpful, please consider starring our repository and citing:
 ```
