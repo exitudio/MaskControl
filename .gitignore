@@ -1,7 +1,6 @@
 *.pyc
 checkpoints
 editing
-generation
 glove
 log
 dataset/HumanML3D
