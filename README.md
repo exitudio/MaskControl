@@ -5,11 +5,11 @@
 
 If you find our code or paper helpful, please consider starring our repository and citing:
 ```
-@article{pinyoanuntapong2024controlmm,
-  title={ControlMM: Controllable Masked Motion Generation},
+@inproceedings{pinyoanuntapong2025maskcontrol,
+  title={MaskControl: Spatio-Temporal Control for Masked Motion Synthesis},
   author={Pinyoanuntapong, Ekkasit and Saleem, Muhammad Usama and Karunratanakul, Korrawe and Wang, Pu and Xue, Hongfei and Chen, Chen and Guo, Chuan and Cao, Junli and Ren, Jian and Tulyakov, Sergey},
-  journal={arXiv preprint arXiv:2410.10780},
-  year={2024}
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  year={2025}
 }
 ```
 
