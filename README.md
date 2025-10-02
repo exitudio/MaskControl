@@ -175,7 +175,7 @@ Example 2 -- Head avoidance
 <img src="./assets/head_avoid.gif" width="300">
 
 ```
-python -m generation.avoidance --path_name ./output/avoidance2 --iter_each 100 --iter_last 600
+python -m generation.avoidance2 --path_name ./output/avoidance2 --iter_each 100 --iter_last 600
 ```
 
 </details>
