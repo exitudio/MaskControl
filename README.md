@@ -152,7 +152,7 @@ The following joints can be controlled:
 
 #### 🚀 Joints Control
 ```
-python -m generation.control_joint --path_name ./output/control1 --iter_each 100 --iter_last 600
+python -m generation.control_joint --path_name ./output/control2 --iter_each 100 --iter_last 600
 ```
 | Argument      | Type | Default         | Description                                                                |
 | ------------- | ---- | --------------- | -------------------------------------------------------------------------- |
@@ -161,6 +161,10 @@ python -m generation.control_joint --path_name ./output/control1 --iter_each 100
 | `--iter_last` | int  | `600`           | Number of logits optimization steps at the final unmasking step.           |
 | `--show`      | flag | `False`         | If set, automatically opens the result HTML visualization after execution. |
 
+#### 🚀 Obstrucle Avoidance
+```
+python -m generation.avoidance --path_name ./output/avoidance1 --iter_each 100 --iter_last 600
+```
 
 </details>
 
