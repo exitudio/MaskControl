@@ -162,8 +162,20 @@ python -m generation.control_joint --path_name ./output/control2 --iter_each 100
 | `--show`      | flag | `False`         | If set, automatically opens the result HTML visualization after execution. |
 
 #### 🚀 Obstrucle Avoidance
+Example 1 -- Trajectory avoidance
+<!-- ![teaser_image](./assets/traj_avoid.gif) -->
+<img src="./assets/traj_avoid.gif" width="300">
+
 ```
 python -m generation.avoidance --path_name ./output/avoidance1 --iter_each 100 --iter_last 600
+```
+
+Example 2 -- Head avoidance
+<!-- ![teaser_image](./assets/head_avoid.gif) -->
+<img src="./assets/head_avoid.gif" width="300">
+
+```
+python -m generation.avoidance --path_name ./output/avoidance2 --iter_each 100 --iter_last 600
 ```
 
 </details>
