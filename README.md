@@ -22,7 +22,7 @@ If you find our code or paper helpful, please consider starring our repository a
 
 ### 🎯 Generation
 - [x] Joint Control
-- [ ] Obstacle Avoidance
+- [x] Obstacle Avoidance
 - [ ] Body Part Timeline Control
 
 ### 🏋️ Training
