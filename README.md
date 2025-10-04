@@ -179,13 +179,8 @@ python -m generation.avoidance2 --path_name ./output/avoidance2 --iter_each 100 
 ```
 
 </details>
-
-## Acknowlegements
-
-We sincerely thank the open-sourcing of these works where our code is based on: 
-[MoMask](https://github.com/EricGuo5513/momask-codes/tree/main), [OmniControl](https://neu-vi.github.io/omnicontrol/), [GMD](https://github.com/korrawe/guided-motion-diffusion), [MMM](https://github.com/exitudio/MMM), [TLControl](https://github.com/HiWilliamWWL/TLControl), [STMC](https://github.com/nv-tlabs/stmc), [ProgMoGen](https://github.com/HanchaoLiu/ProgMoGen), [TEMOS](https://github.com/Mathux/TEMOS) and [BAMM](https://github.com/exitudio/BAMM/)
-
 ## License
 This code is distributed under an [LICENSE-CC-BY-NC-ND-4.0](https://github.com/exitudio/MMM/blob/main/LICENSE-CC-BY-NC-ND-4.0.md).
 
-Note that our code depends on other libraries, including SMPL, SMPL-X, PyTorch3D, and uses datasets which each have their own respective licenses that must also be followed.
+Note that our code depends on other libraries, including 
+[MoMask](https://github.com/EricGuo5513/momask-codes/tree/main), [OmniControl](https://neu-vi.github.io/omnicontrol/), [GMD](https://github.com/korrawe/guided-motion-diffusion), [MMM](https://github.com/exitudio/MMM), [TLControl](https://github.com/HiWilliamWWL/TLControl), [STMC](https://github.com/nv-tlabs/stmc), [ProgMoGen](https://github.com/HanchaoLiu/ProgMoGen), [TEMOS](https://github.com/Mathux/TEMOS) and [BAMM](https://github.com/exitudio/BAMM/) which each have their own respective licenses that must also be followed.
