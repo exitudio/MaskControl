@@ -115,11 +115,11 @@ class CtrlNetTrainer:
         # TODO return TTT loss
         return loss_emb, ce_loss, loss_tta, _acc
 
-    def update(self, batch_data):
+    def update(self, batch_data, opt):
         loss_emb, ce_loss, loss_TTT, acc = self.forward(batch_data)
 
         self.opt_t2m_transformer.zero_grad()
-        (0*loss_emb+.5*ce_loss+.5*loss_TTT).backward()
+        (0*loss_emb+opt.xent*ce_loss+opt.ctrl_loss*loss_TTT).backward()
         self.opt_t2m_transformer.step()
         self.scheduler.step()
 
@@ -202,7 +202,7 @@ class CtrlNetTrainer:
                                                                     i, eval_wrapper=eval_wrapper,
                                                         time_steps=opt.time_steps, cond_scale=opt.cond_scale,
                                                         temperature=opt.temperature, topkr=opt.topkr,
-                                                                    force_mask=opt.force_mask, cal_mm=True, f=None, TTT=TTT, pred_num_batch=16, logger=self.logger, epoch=epoch,
+                                                                    force_mask=opt.force_mask, cal_mm=True, f=None, pred_num_batch=16, logger=self.logger, epoch=epoch,
                                                                     control=opt.control, 
                                                                     density=-1, opt=opt)
         best_acc = 0.
@@ -216,7 +216,7 @@ class CtrlNetTrainer:
                 if it < self.opt.warm_up_iter:
                     self.update_lr_warm_up(it, self.opt.warm_up_iter, self.opt.lr)
 
-                loss_emb, loss, loss_TTT, acc = self.update(batch_data=batch)
+                loss_emb, loss, loss_TTT, acc = self.update(batch_data=batch, opt=opt)
                 logs['loss_emb'] += loss_emb
                 logs['loss'] += loss
                 logs['loss_TTT'] += loss_TTT
@@ -272,7 +272,7 @@ class CtrlNetTrainer:
                                                                     i, eval_wrapper=eval_wrapper,
                                                         time_steps=opt.time_steps, cond_scale=opt.cond_scale,
                                                         temperature=opt.temperature, topkr=opt.topkr,
-                                                                    force_mask=opt.force_mask, cal_mm=True, f=None, TTT=TTT, pred_num_batch=16, logger=self.logger, epoch=epoch,
+                                                                    force_mask=opt.force_mask, cal_mm=True, f=None, pred_num_batch=16, logger=self.logger, epoch=epoch,
                                                                     control=opt.control, 
                                                                     density=-1, opt=opt)
                 if best_kps_mean > kps_mean:

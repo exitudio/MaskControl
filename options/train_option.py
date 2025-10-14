@@ -30,6 +30,8 @@ class TrainT2MOptions(BaseOptions):
         self.parser.add_argument('--trans_name', type=str, default="t2m_nlayer8_nhead6_ld384_ff1024_cdp0.1_rvq6ns", help='Name of this trial')
         self.parser.add_argument('--control', default='trajectory', type=str, help="trajectory, random, cross")
 
+        self.parser.add_argument('--xent', default=.1, type=float, help="")
+        self.parser.add_argument('--ctrl_loss', default=.9, type=float, help="")
         self.is_train = True
 
 

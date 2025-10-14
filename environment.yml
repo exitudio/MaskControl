@@ -1,4 +1,4 @@
-name: ControlMM
+name: MaskControl
 channels:
   - pytorch
   - defaults

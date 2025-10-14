@@ -13,6 +13,11 @@ If you find our code or paper helpful, please consider starring our repository a
 }
 ```
 
+## Update
+
+📢 Oct/14/2025 - Add training script
+📢 Oct/14/2025 - update env name from 'ControlMM' to 'MaskControl'
+
 ## ✅ TODO List
 
 ### 🧪 Evaluation
@@ -27,7 +32,7 @@ If you find our code or paper helpful, please consider starring our repository a
 
 ### 🏋️ Training
 - [ ] Retrain MoMask with Cross Entropy for All Positions
-- [ ] Add Logits Regularizer
+- [x] Add Logits Regularizer
 
 
 
@@ -39,7 +44,7 @@ Our code built on top of [MoMask](https://github.com/EricGuo5513/momask-codes/tr
 ### 1. Conda Environment
 ```
 conda env create -f environment.yml
-conda activate ControlMM
+conda activate MaskControl
 pip install git+https://github.com/openai/CLIP.git
 ```
 
@@ -84,6 +89,40 @@ cp -r ../HumanML3D/HumanML3D ./dataset/HumanML3D
 
 
 
+
+## :book: Traing:
+<details>
+
+```
+python train_ctrlnet.py \
+    --name CtrlNet_.5XEnt.5TTT__traj_NoRetrainTrans \
+    --trans_name t2m_nlayer8_nhead6_ld384_ff1024_cdp0.1_rvq6ns \
+    --gpu_id 5 \
+    --dataset_name t2m \
+    --batch_size 64 \
+    --vq_name rvq_nq6_dc512_nc512_noshare_qdp0.2 \
+    --xent .5 \
+    --ctrl_loss .5 \
+    --control trajectory
+```
+
+### Training Arguments
+
+| Argument | Example Value | Description |
+|-----------|----------------|-------------|
+| `--name` | `CtrlNet_.5XEnt.5TTT__traj_NoRetrainTrans` | Name of the experiment. Used for logging and checkpoint saving. |
+| `--trans_name` | `t2m_nlayer8_nhead6_ld384_ff1024_cdp0.1_rvq6ns` | Pretrained Transformer |
+| `--gpu_id` | `5` | GPU device ID to use for training. |
+| `--dataset_name` | `t2m` | Dataset name. |
+| `--batch_size` | `64` | Number of samples per training batch. |
+| `--vq_name` | `rvq_nq6_dc512_nc512_noshare_qdp0.2` | Pretrained VQVAE |
+| `--xent` | `0.5` | Weight for the cross-entropy(Logits
+Consistency Loss). |
+| `--ctrl_loss` | `0.5` | Weight for the control loss (Motion
+Consistency Loss). |
+| `--control` | `trajectory` | Type of control signal (i.e., `trajectory`, `random`, `cross`). |
+
+</details>
 
 
 ## :book: Evaluation on joint control:
@@ -148,12 +187,14 @@ The following joints can be controlled:
 </details>
 
 ## 🎯 Generation
-<details>
 
 #### 🚀 Joints Control
+<img src="./assets/joint_control.gif" width="300">
+
 ```
 python -m generation.control_joint --path_name ./output/control2 --iter_each 100 --iter_last 600
 ```
+
 | Argument      | Type | Default         | Description                                                                |
 | ------------- | ---- | --------------- | -------------------------------------------------------------------------- |
 | `--path_name` | str  | `./output/test` | Output directory to save the optimization results.                         |
@@ -178,7 +219,6 @@ Example 2 -- Head avoidance
 python -m generation.avoidance2 --path_name ./output/avoidance2 --iter_each 100 --iter_last 600
 ```
 
-</details>
 
 ## License
 
