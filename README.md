@@ -90,7 +90,7 @@ cp -r ../HumanML3D/HumanML3D ./dataset/HumanML3D
 
 
 
-## :book: Traing:
+## :book: Training
 <details>
 
 ```
@@ -125,7 +125,7 @@ Consistency Loss). |
 </details>
 
 
-## :book: Evaluation on joint control:
+## :book: Evaluation on joint control
 <details>
 
 #### ▶️ Pelvis Only (GMD Evaluation)
