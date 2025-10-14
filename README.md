@@ -15,7 +15,7 @@ If you find our code or paper helpful, please consider starring our repository a
 
 ## Update
 
-📢 Oct/14/2025 - Add training script
+📢 Oct/14/2025 - Add training script <br>
 📢 Oct/14/2025 - update env name from 'ControlMM' to 'MaskControl'
 
 ## ✅ TODO List
