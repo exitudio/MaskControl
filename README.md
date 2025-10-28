@@ -5,11 +5,12 @@
 
 If you find our code or paper helpful, please consider starring our repository and citing:
 ```
-@inproceedings{pinyoanuntapong2025maskcontrol,
-  title={MaskControl: Spatio-Temporal Control for Masked Motion Synthesis},
-  author={Pinyoanuntapong, Ekkasit and Saleem, Muhammad Usama and Karunratanakul, Korrawe and Wang, Pu and Xue, Hongfei and Chen, Chen and Guo, Chuan and Cao, Junli and Ren, Jian and Tulyakov, Sergey},
-  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
-  year={2025}
+@inproceedings{Pinyoanuntapong2025MaskControl,
+  title     = {MaskControl: Spatio-Temporal Control for Masked Motion Synthesis},
+  author    = {Pinyoanuntapong, Ekkasit and Saleem, Muhammad and Karunratanakul, Korrawe and Wang, Pu and Xue, Hongfei and Chen, Chen and Guo, Chuan and Cao, Junli and Ren, Jian and Tulyakov, Sergey},
+  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+  pages     = {9955--9965},
+  year      = {2025}
 }
 ```
 
