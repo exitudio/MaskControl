@@ -1,4 +1,4 @@
-# MaskControl: Spatio-Temporal Control for Masked Motion Synthesis (ICCV 2025 -- Oral)
+# MaskControl: Spatio-Temporal Control for Masked Motion Synthesis (ICCV 2025 -- Oral & Award Candidate)
 ## [Previous Name] ControlMM: Controllable Masked Motion Generation
 ### [[Project Page]](https://www.ekkasit.com/ControlMM-page/) [[Paper]](https://arxiv.org/abs/2410.10780)
 ![teaser_image](https://www.ekkasit.com/ControlMM-page/assets/landing.jpg)
