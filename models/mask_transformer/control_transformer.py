@@ -345,7 +345,7 @@ class ControlTransformer(MaskTransformer):
         # print(padding_mask.shape, xseq.shape)
 
         output = forward_with_condition(self.seqTransEncoder, 
-                                        control_input, 
+                                        control_input, # this should be "xseq" see https://github.com/exitudio/MaskControl/issues/9
                                         list_of_controlnet_output=control_output_list,
                                         src_key_padding_mask=padding_mask)[1:] #(seqlen, b, e)
         logits = self.output_process(output) #(seqlen, b, e) -> (b, ntoken, seqlen)
